@@ -29,13 +29,19 @@ LISTA *lista_criar(void){
 }
 
 bool lista_inserir(LISTA *lista, int dist, int id){
-    printf("A\n");
+    //Adicionar um check se o fim existe. Caso exista, só adiciona no prox, caso contrario fim é novo no
     NO *novo_no;
     novo_no = no_criar(id, dist);
 
-    lista->fim->proximo = novo_no;
-    set_proximo(lista->fim, novo_no);
+    if(lista->fim == NULL){
+        lista->fim = novo_no;
+    }else{
+        lista->fim->proximo = novo_no;
+        set_proximo(lista->fim, novo_no);
+    }
     lista->tamanho++;
+    
+    return true;
 }
 
 int lista_tamanho(LISTA *lista){
