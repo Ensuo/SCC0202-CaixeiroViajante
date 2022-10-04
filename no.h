@@ -14,7 +14,7 @@
     NO *no_criar(int id, int dist);
     int get_id(NO* x);
     int get_dist(NO* x);
-    bool item_apagar(NO** item);
+    bool no_apagar(NO** item);
 
 
 

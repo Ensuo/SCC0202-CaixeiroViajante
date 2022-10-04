@@ -28,7 +28,7 @@ int get_dist(NO* x){
     return x->distancia;
 }
 
-bool item_apagar(NO** no){
+bool no_apagar(NO** no){
     if(*no != NULL){
         free(*no);
         *no = NULL;
