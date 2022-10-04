@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lista.h"
-#include "node.h"
 
 struct no_{
     ITEM *item;
@@ -18,7 +17,7 @@ typedef lista_ LISTA;
 
 
 
-LISA *lista_criar(void){
+LISTA *lista_criar(void){
     LISTA *lista;
     lista = malloc(1*sizeof(LISTA));
 
