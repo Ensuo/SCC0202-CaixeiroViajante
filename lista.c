@@ -8,7 +8,7 @@ struct lista_{
     NO *fim;
     int tamanho;
 };
-typedef lista_ LISTA;
+typedef struct lista_ LISTA;
 
 LISTA *lista_criar(void){
     LISTA *lista;
@@ -25,13 +25,13 @@ bool lista_inserir(LISTA *lista, int dist, int id){
     NO *novo_no;
     novo_no = no_criar(id, dist);
 
-    lista->fim->proximo = novo_no
+    lista->fim->proximo = novo_no;
     set_proximo(lista->fim, novo_no);
     lista->tamanho++;
 }
 
 bool lista_vazia(LISTA *lista){
-
+    return lista_tamanho(lista) == 0;
 }
 
 bool lista_apagar(LISTA **lista){
