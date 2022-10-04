@@ -8,7 +8,7 @@
     struct no_{
         int cidade_id;
         int distancia;
-        no_* proximo;
+        NO* proximo;
     };
 
     NO *no_criar(int id, int dist);
