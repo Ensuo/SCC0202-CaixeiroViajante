@@ -2,13 +2,8 @@
     #define LISTA_H
 
     #include <stdbool.h>
-    
-    typedef struct lista_ list;
 
-    typedef struct Node{
-        int id;
-        Node* conectados;
-    }Node;
+    typedef struct lista_ list;
 
     list *lista_criar(void);
     bool lista_inserir(list *lista, int chave);
