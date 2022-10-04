@@ -13,6 +13,8 @@
     //No* lista_busca(list *lista, int id);
     int lista_tamanho(list *lista);
     bool lista_vazia(list *lista);
+    NO* get_inicio(list *lista);
+    NO* get_fim(list *lista);
     // bool lista_cheia(list *lista);
     // void lista_imprimir(list *lista);
     // int distancia_nodes(list *lista, Node* a, Node* b);
