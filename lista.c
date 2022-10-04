@@ -8,7 +8,7 @@ struct lista_{
     NO *fim;
     int tamanho;
 };
-typedef lista_ LISTA;
+typedef struct lista_ LISTA;
 
 LISTA *lista_criar(void){
     LISTA *lista;
@@ -35,7 +35,7 @@ int lista_tamanho(LISTA *lista){
 }
 
 bool lista_vazia(LISTA *lista){
-    return lista_tamanho(lista) == 0
+    return lista_tamanho(lista) == 0;
 }
 
 bool lista_apagar(LISTA **lista){
