@@ -29,6 +29,7 @@ LISTA *lista_criar(void){
 }
 
 bool lista_inserir(LISTA *lista, int dist, int id){
+    printf("A\n");
     NO *novo_no;
     novo_no = no_criar(id, dist);
 

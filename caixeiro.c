@@ -16,9 +16,11 @@ int main(){
         cidades_passadas[i] = -1;
     }
 
+    scanf("%d", &n);
     printf("Passou aqui 2\n");
 
     for(int i = 0; i < n; i++){
+        printf("i: %d\n", i);
         int a, b, distancia;
         scanf("%d %d %d", &a, &b, &distancia);
         temp = a;
