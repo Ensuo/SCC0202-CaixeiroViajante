@@ -9,6 +9,7 @@
     list *lista_criar(void);
     bool lista_inserir(list *lista, int dist, int id);
     //No* lista_remover(list *lista, int id);dsadasd
+    NO* lista_procurar(list *lista, int id);
     bool lista_apagar(list **lista);
     //No* lista_busca(list *lista, int id);
     int lista_tamanho(list *lista);

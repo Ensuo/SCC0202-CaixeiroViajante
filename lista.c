@@ -30,16 +30,32 @@ LISTA *lista_criar(void){
     return(lista);
 }
 
+NO* lista_procurar(LISTA *lista, int id){
+    NO* inicio = get_inicio(lista);
+    if(inicio){
+        while(get_id(inicio) != id && inicio != NULL){
+            inicio = inicio->proximo;
+        }
+    }
+
+    return inicio;
+}
+
 bool lista_inserir(LISTA *lista, int dist, int id){
     //Adicionar um check se o fim existe. Caso exista, só adiciona no prox, caso contrario fim é novo no
     NO *novo_no;
     novo_no = no_criar(id, dist);
 
-    if(lista->fim == NULL){
+    if(lista->inicio == NULL){
+        lista->inicio = novo_no;
+        lista->fim = novo_no;
+    }else if(lista->fim == lista->inicio){
+        lista->inicio->proximo = lista->fim;
+        lista->fim == NULL;
         lista->fim = novo_no;
     }else{
         lista->fim->proximo = novo_no;
-        set_proximo(lista->fim, novo_no);
+        lista->fim = novo_no;
     }
     lista->tamanho++;
     

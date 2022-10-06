@@ -22,16 +22,24 @@ int main(){
     scanf("%d", &n);
 
     for(int i = 0; i < n; i++){
-        printf("i: %d\n", i);
         int a, b, distancia;
         scanf("%d %d %d", &a, &b, &distancia);
         lista_inserir(cidades[a], distancia, b); //Adicionando a cidade b a lista de cidades conectadas com a, junto com sua distancia.
         lista_inserir(cidades[b], distancia, a); //Fazendo o mesmo vice-versa
     }
 
-    for(int i = 1; i < lista_tamanho(cidades[i]); i++){
-        printf("%d\n" , get_id(get_inicio(cidades[i])));
+    for(int i = 1; i <= n; i++){
+        printf("i: %d\n", i);
+        if(get_inicio(cidades[i]) != NULL){
+            printf("lista tamanho: %d\n", lista_tamanho(cidades[i]));
+            NO* temp = get_inicio(cidades[i]);
+            for(int j = 0; j < lista_tamanho(cidades[i]); j++){
+                printf("id atual: %d\n", get_id(temp));
+                temp = temp->proximo;
+            }
+        }   
     }
+    
 
     return 0;
 }
