@@ -33,8 +33,8 @@ int main(){
         if(get_inicio(cidades[i]) != NULL){
             printf("lista tamanho: %d\n", lista_tamanho(cidades[i]));
             NO* temp = get_inicio(cidades[i]);
-            for(int j = 0; j < lista_tamanho(cidades[i]); j++){
-                printf("id atual: %d\n", get_id(temp));
+            while(temp != NULL){
+                printf("id: %d", get_id(temp));
                 temp = temp->proximo;
             }
         }   
