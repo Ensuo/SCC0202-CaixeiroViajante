@@ -2,19 +2,11 @@
 #include <stdlib.h>
 #include "lista.h"
 
-
-struct lista_{
-    NO *inicio;
-    NO *fim;
-    int tamanho;
-};
-typedef struct lista_ LISTA;
-
-NO* get_inicio(list *lista){
+NO* get_inicio(LISTA *lista){
     return lista->inicio;
 }
 
-NO* get_fim(list *lista){
+NO* get_fim(LISTA *lista){
     return lista->fim;
 }
 
@@ -48,15 +40,11 @@ bool lista_inserir(LISTA *lista, int dist, int id){
 
     if(lista->inicio == NULL){
         lista->inicio = novo_no;
-        lista->fim = novo_no;
-    }else if(lista->fim == lista->inicio){
-        lista->inicio->proximo = lista->fim;
-        lista->fim == NULL;
-        lista->fim = novo_no;
     }else{
-        lista->fim->proximo = novo_no;
-        lista->fim = novo_no;
+        lista -> fim -> proximo = novo_no;
     }
+
+    lista->fim = novo_no;
     lista->tamanho++;
     
     return true;

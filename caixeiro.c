@@ -2,14 +2,10 @@
 #include <stdlib.h>
 #include "lista.h"
 
-int distancia(list* cidades, int inicio, int fim){
-    
-}
-
 int main(){
     int n, temp;
 
-    list *cidades[13]; //Criando um vetor de list para 12 cidades
+    LISTA *cidades[13]; //Criando um vetor de list para 12 cidades
     int cidades_passadas[12];
 
 
@@ -33,8 +29,12 @@ int main(){
         if(get_inicio(cidades[i]) != NULL){
             printf("lista tamanho: %d\n", lista_tamanho(cidades[i]));
             NO* temp = get_inicio(cidades[i]);
+
             while(temp != NULL){
                 printf("id: %d", get_id(temp));
+                if(temp == temp->proximo){
+                    break;
+                }
                 temp = temp->proximo;
             }
         }   
