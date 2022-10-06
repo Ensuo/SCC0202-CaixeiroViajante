@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include "lista.h"
 
+int distancia(list* cidades, int inicio, int fim){
+    
+}
+
 int main(){
     int n, temp;
 

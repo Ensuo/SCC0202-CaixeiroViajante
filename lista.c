@@ -18,6 +18,8 @@ NO* get_fim(list *lista){
     return lista->fim;
 }
 
+
+
 LISTA *lista_criar(void){
     LISTA *lista;
     lista = malloc(1*sizeof(LISTA));
