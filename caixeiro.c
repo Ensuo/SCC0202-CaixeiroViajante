@@ -26,6 +26,7 @@ int main(){
         int a, b, distancia;
         scanf("%d %d %d", &a, &b, &distancia);
         lista_inserir(cidades[a], distancia, b); //Adicionando a cidade b a lista de cidades conectadas com a, junto com sua distancia.
+        lista_inserir(cidades[b], distancia, a); //Fazendo o mesmo vice-versa
     }
 
     for(int i = 1; i < lista_tamanho(cidades[i]); i++){
