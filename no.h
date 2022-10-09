@@ -16,6 +16,8 @@
     int get_dist(NO* x);
     bool no_apagar(NO** item);
     void set_proximo(NO* no, NO* prox);
+    NO *get_proximo(NO *no);
+
 
 
 #endif

@@ -20,6 +20,10 @@ void set_proximo(NO *no, NO *prox){
     no->proximo = prox;
 }
 
+NO *get_proximo(NO *no){
+  return(no->proximo);
+}
+
 int get_id(NO* x){
     return x->cidade_id;
 }

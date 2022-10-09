@@ -43,10 +43,11 @@ bool lista_inserir(LISTA *lista, int dist, int id){
     }else{
         lista -> fim -> proximo = novo_no;
     }
+    
 
     lista->fim = novo_no;
     lista->tamanho++;
-    
+
     return true;
 }
 
@@ -59,13 +60,11 @@ bool lista_vazia(LISTA *lista){
 }
 
 bool lista_apagar(LISTA **lista){
-    NO *temp = (*lista)->inicio; //Guarda o antigo início 
+    NO *temp = (*lista)->inicio; //Guarda o antigo início
     (*lista)->inicio = temp->proximo; //Novo início é o próximo do antigo início
     no_apagar(&temp); //Elimina o no do antigo início
 
-    (*lista)->tamanho--; 
-    
+    (*lista)->tamanho--;
+
     return lista_vazia ? true : lista_apagar(lista); //Se a toda a lista foi removida, entao retornar true, caso contrário chamar recursivamente a função lista_apagar()
 }
-
-

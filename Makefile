@@ -1,17 +1,17 @@
-﻿all: no.o lista.o caixeiro.o
-	gcc no.o lista.o caixeiro.o -o caixeiro -std=c99 -Wall
+all: no.o lista.o caixeiro.o
+	gcc caixeiro.o lista.o no.o -o p_e_c -std=c99 -Wall
+
+lista.o:
+	gcc -c lista.c -o lista.o
 
 no.o:
 	gcc -c no.c -o no.o
 
-lista.o:
-	gcc -c lista.c -o lista.o
-	 
 caixeiro.o:
 	gcc -c caixeiro.c -o caixeiro.o
-	 
+
 clean:
-	rm *.o caixeiro
+	rm *.o p_e_c
 
 run:
-	./rpn
+	./p_e_c
